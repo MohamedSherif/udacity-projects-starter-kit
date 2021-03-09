@@ -74,7 +74,7 @@ app.post('/add-url', async (req, res) => {
 
 
                 var apiResponse = {
-                    text: '',
+                    text: (jsonBody.sentence_list != null && jsonBody.sentence_list != undefined && jsonBody.sentence_list.length > 0)? jsonBody.sentence_list[0].text : '',
                     score_tag : jsonBody.score_tag,
                     agreement : jsonBody.agreement,
                     subjectivity : jsonBody.subjectivity,
