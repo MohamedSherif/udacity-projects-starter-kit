@@ -1,9 +1,23 @@
 import handleSubmit from './js/formHandler'
+import validateUrl from './js/checkURL'
 
-// TODO include your scss file here
+// Include scss file here
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/form.scss'
+import './styles/footer.scss'
+import './styles/header.scss'
 
 window.addEventListener('DOMContentLoaded', () => {
-    // TODO: get the button for submit
-    // TODO: add event listener to it when the click to call handleSubmit function
+    // onsubmit="return Client.handleSubmit(event)"
+    // onclick = "return Client.handleSubmit(event)"
+
+    // Get the button for submit
+    // var form = document.getElementById('form');
+    // debugger;
+    // Add event listener to it when the click to call handleSubmit function
+    // form.addEventListener('submit', handleSubmit);
+    var submitBtn = document.getElementById('submitbtn');
+    submitBtn.addEventListener('click', handleSubmit);
 })
-export { handleSubmit }
+export { handleSubmit, validateUrl }

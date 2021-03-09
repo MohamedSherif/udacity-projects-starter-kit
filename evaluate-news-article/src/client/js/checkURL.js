@@ -1,4 +1,12 @@
-// TODO declare a function to check the url ..
+// Declare a function to check the url ..
+const validateUrl = function(url) {
+    var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
+    var regexp = new RegExp(expression);
+    return regexp.test(url);
+}
+
+export default validateUrl
+
 //  The question now how can i do it. I understand you are very busy mate so here's some hints pick the one you like
 /* HINTS
     1. https://gist.github.com/franciskim/41a959f8e3989254ef5d
