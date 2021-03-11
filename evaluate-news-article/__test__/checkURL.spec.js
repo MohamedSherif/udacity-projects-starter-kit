@@ -1,15 +1,16 @@
-// TODO: import the url check function
+// Import the url validation function
+const validateUrl = require('../src/client/js/checkURL').default
 
 describe('Test check url functionality', () => {
     test('Testing the checkUrl function defined or not', () => {
-        // TODO: write your logic here
+        expect(validateUrl).toBeDefined();
     })
 
     test('Testing the checkUrl function return false for invalid url', () => {
-        // TODO: write your logic here
+        expect(validateUrl('sdsfsdfsdf')).toEqual(false);
     })
 
     test('Testing the checkUrl function return true for valid url', () => {
-        // TODO: write your logic here
+        expect(validateUrl('www.google.com')).toEqual(true);
     })
 })

@@ -60,4 +60,4 @@ const handleSubmit = async (event) => {
     }
 }
 
-export default handleSubmit
+export { handleSubmit, post }

@@ -1,7 +1,7 @@
 // Environment variables Configuration 
 const dotenv = require('dotenv');
 dotenv.config();
-console.log(`Your API key is ${process.env.API_KEY}`);
+// console.log(`Your API key is ${process.env.API_KEY}`);
 
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
@@ -12,10 +12,6 @@ const https = require('follow-redirects').https;
 const fs = require('fs');
 
 const PORT = 8085
-
-// TODO add Configuration to be able to use env variables
-
-const BASE_API_URL = 'https://api.meaningcloud.com/sentiment-2.1'
 
 // Create an instance for the server
 const app = express()
@@ -69,10 +65,6 @@ app.post('/add-url', async (req, res) => {
 
                 var jsonBody = JSON.parse(body.toString());
 
-                console.log('Score_Tag: ' + jsonBody.score_tag);
-                console.log('Agreement: ' + jsonBody.agreement);
-
-
                 var apiResponse = {
                     text: (jsonBody.sentence_list != null && jsonBody.sentence_list != undefined && jsonBody.sentence_list.length > 0)? jsonBody.sentence_list[0].text : '',
                     score_tag : jsonBody.score_tag,
@@ -94,23 +86,6 @@ app.post('/add-url', async (req, res) => {
         });
 
         req.end();
-
-        /* 
-            1. GET the url from the request body
-            2. Build the URL it should be something like `${BASE_API_URL}?key=${MEAN_CLOUD_API_KEY}&url=${req.body.url}&lang=en`
-            3. Fetch Data from API
-            4. Send it to the client
-            5. REMOVE THIS TODO AFTER DOING IT
-            server sends only specified data to the client with below codes
-            const sample = {
-            text: '',
-            score_tag : '',
-            agreement : '',
-            subjectivity : '',
-            confidence : '',
-            irony : ''
-            }
-        */
     } catch (error) {
         console.log(error.message)
     }

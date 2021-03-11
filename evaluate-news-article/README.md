@@ -66,12 +66,8 @@ Command | Action
 - cd into your new folder and run in prod mode
 - `npm install`
 - `npm run build-prod to generate a dist folder for prod`
-- `npm run start to run the Express server on port 8080`
+- `npm run start to run the Express server on port 8085`
 
-**Note:** The web page can be accessed with `localhost:8080`
+**Note:** The web page can be accessed with `localhost:8085`
 
-8. Open browser at http://localhost:8081/
-
-------
-
-Made with ❤️️ and javascript
+8. Open browser at http://localhost:8080/
