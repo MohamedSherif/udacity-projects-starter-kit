@@ -1,5 +1,5 @@
 const post = async (url = '', data = {}) => {
-    debugger;
+    // debugger;
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -34,7 +34,7 @@ const handleSubmit = async (event) => {
 
     if(Client.validateUrl(url) == true){
         // Valid URL
-        debugger;
+        // debugger;
         console.log("::: Form Submitted :::")
         post('http://localhost:8085/add-url', {_url : url}).then((result) => {
             console.log(result);

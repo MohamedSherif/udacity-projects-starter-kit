@@ -71,3 +71,10 @@ Command | Action
 **Note:** The web page can be accessed with `localhost:8085`
 
 8. Open browser at http://localhost:8080/
+9. Enter the article URL to the input Textfield to be sent to the API.
+10. Submit Button to Send the article URL to Backend
+11. API response is rendered on the result Div in the index.html page.
+
+### THANKS FOR REVIEWING MY PROJECT :)
+
+

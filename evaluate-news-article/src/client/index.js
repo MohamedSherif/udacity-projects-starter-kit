@@ -1,5 +1,7 @@
-import handleSubmit from './js/formHandler'
-import validateUrl from './js/checkURL'
+// import handleSubmit from './js/formHandler'
+const handleSubmit = require('./js/formHandler').handleSubmit
+// import validateUrl from './js/checkURL'
+const validateUrl = require('./js/checkURL').default
 
 // Include scss file here
 import './styles/resets.scss'
